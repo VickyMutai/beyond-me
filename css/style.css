@@ -440,4 +440,22 @@ footer a {
   #intro-right p {
     font-size: 12px;
   }
+
+  .div-title h1 {
+    font-size: 22px;
+  }
+  .controls {
+    right: 20px;
+  }
+  .div-items {
+    width: 100%;
+  }
+  .div-item {
+    margin-right: 5px;
+    padding: 0px;
+  }
+  .item-img {
+    width: 100%;
+    height: auto;
+  }
 }
