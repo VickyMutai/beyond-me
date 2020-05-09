@@ -394,13 +394,24 @@ footer a {
 
   #mid-nav {
     width: 100%;
+    display: block;
+    margin: 0;
+    padding: 10px;
   }
 
-  a {
+  a,
+  button {
     font-size: 13px;
   }
 
+  #mid-nav a {
+    margin-right: 30px;
+    padding-left: 0;
+  }
+
   #mid-nav form input {
-    width: 100px;
+    width: 90%;
+    margin: 0;
+    padding: 0;
   }
 }
