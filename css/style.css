@@ -352,6 +352,11 @@ footer a {
   right: 50px;
 }
 
+.navbar-right-sm {
+  display: none;
+  visibility: hidden;
+}
+
 @media screen and (max-width: 768px) {
   nav a {
     font-size: 15px;
@@ -375,6 +380,15 @@ footer a {
     font-size: 8px;
   }
   .navbar-right {
+    display: inline-block;
+  }
+  .what-we-do,
+  .navbar-right {
+    visibility: hidden;
+    display: none;
+  }
+  .navbar-right-sm {
+    visibility: visible;
     display: inline-block;
   }
 }
