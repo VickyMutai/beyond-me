@@ -403,6 +403,9 @@ footer a {
   button {
     font-size: 13px;
   }
+  h5 {
+    font-size: 20px;
+  }
 
   #mid-nav a {
     margin-right: 30px;
@@ -413,5 +416,28 @@ footer a {
     width: 90%;
     margin: 0;
     padding: 0;
+  }
+
+  #intro {
+    height: 600px;
+  }
+  #intro-left {
+    margin-top: 80px;
+  }
+  #intro-left p,
+  #intro-left a {
+    font-size: 10px;
+  }
+  #intro-right {
+    margin-top: 20px;
+  }
+  #intro-right h1 {
+    font-size: 20px;
+  }
+  #intro-right h3 {
+    font-size: 15px;
+  }
+  #intro-right p {
+    font-size: 12px;
   }
 }
