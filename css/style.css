@@ -386,6 +386,7 @@ footer a {
   }
   .navbar-right-sm {
     visibility: visible;
-    display: inline-block;
+    display: block;
+    float: right;
   }
 }
