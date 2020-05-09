@@ -372,18 +372,15 @@ footer a {
     padding: 0;
   }
   nav h1 {
-    font-size: 15px;
+    font-size: 20px;
     margin: 0;
     padding-top: 10px;
   }
   nav a {
     font-size: 8px;
   }
-  .navbar-right {
-    display: inline-block;
-  }
   .what-we-do,
-  .navbar-right {
+  #navbar-right {
     visibility: hidden;
     display: none;
   }
