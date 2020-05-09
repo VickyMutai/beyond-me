@@ -366,7 +366,7 @@ footer a {
 @media screen and (max-width: 425px) {
   nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -386,7 +386,6 @@ footer a {
   }
   .navbar-right-sm {
     visibility: visible;
-    display: block;
-    float: right;
+    display: inline-flex;
   }
 }
