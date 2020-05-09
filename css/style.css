@@ -399,4 +399,8 @@ footer a {
   a {
     font-size: 13px;
   }
+
+  .mid-nav input {
+    width: 100px;
+  }
 }
