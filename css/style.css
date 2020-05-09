@@ -156,7 +156,12 @@ h3 {
   display: flex;
   /* justify-content: space-evenly; */
   margin-left: 20px;
-  overflow-x: hidden;
+  overflow-x: scroll;
+  margin: 20px;
+}
+.div-items::-webkit-scrollbar,
+.top-categories::-webkit-scrollbar {
+  display: none;
 }
 .div-title {
   height: 85px;
@@ -223,6 +228,8 @@ h3 {
   margin-top: 20px;
   display: flex;
   justify-content: space-evenly;
+  overflow-x: scroll;
+  margin: 20px;
 }
 .categories-title {
   margin-top: 40px;
