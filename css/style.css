@@ -387,5 +387,6 @@ footer a {
   .navbar-right-sm {
     visibility: visible;
     display: inline-flex;
+    padding-top: 20px;
   }
 }
