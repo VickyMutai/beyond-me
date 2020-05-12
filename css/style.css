@@ -67,7 +67,7 @@ form {
 
 input {
   padding: 5px;
-  width: 350px;
+  width: 90%;
   outline-color: var(--main-color);
   border: none;
   border-bottom: 1px solid black;
@@ -215,6 +215,7 @@ h3 {
   display: block;
   width: 100%;
   height: auto;
+  overflow: hidden;
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -249,24 +250,25 @@ h3 {
 }
 
 footer {
-  position: relative;
-  bottom: 0;
-  /* margin-top: 50px; */
+  background-color: var(--accent-color);
 }
+
 footer a {
   font-size: var(--smallfont-size) !important;
 }
 
 .footer-nav {
+  position: relative;
+  bottom: 0;
   display: flex;
   width: 100%;
   height: auto;
   padding: 30px;
-  background-color: var(--accent-color);
 }
 
 .footer-nav a {
   color: white !important;
+  padding: 0;
 }
 .copyright {
   text-align: center;
@@ -319,7 +321,8 @@ footer a {
 }
 
 .popular-projects,
-.success-stories {
+.success-stories,
+.all-projects {
   display: relative;
 }
 
@@ -332,6 +335,11 @@ footer a {
   margin-left: 20px;
   overflow-x: scroll;
   margin: 20px;
+}
+
+.all-projects .div-items {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .div-items::-webkit-scrollbar,
@@ -396,6 +404,30 @@ footer a {
 .div-item .percent {
   color: var(--accent-color);
 }
+#all-projects {
+  overflow: hidden;
+}
+.no-scroll {
+  overflow-y: scroll;
+
+  /* overflow: hidden; */
+}
+aside {
+  width: 20%;
+  height: 100%;
+  float: left;
+  /* overflow-y: scroll; */
+  position: relative;
+}
+
+.aside-item {
+  padding-left: 20px;
+}
+main {
+  width: 80%;
+  float: right;
+  /* overflow-y: scroll; */
+}
 
 @media screen and (max-width: 768px) {
   nav a {
@@ -420,6 +452,24 @@ footer a {
 
   .p-large {
     font-size: var(--largefont-size);
+  }
+  main {
+    width: 100%;
+  }
+  aside {
+    width: 50%;
+    position: absolute;
+    z-index: 200;
+    background-color: white;
+  }
+  .visibility {
+    visibility: hidden;
+    display: none;
+  }
+
+  .full-width {
+    width: 100%;
+    display: block;
   }
 
   html,
@@ -498,20 +548,6 @@ footer a {
     min-width: 40%;
     max-width: 40%;
   }
-  /*
-  #intro-right h1 {
-    font-size: var(--h1font-size);
-  }
-  #intro-right h3 {
-    font-size: var(--h3-font-size);
-  }
-  #intro-right p {
-    font-size: var(--smallfont-size);
-  }
-
-  .div-title h1 {
-    font-size: var(--h1font-size);
-  } */
   .controls {
     right: 20px;
   }
@@ -536,5 +572,13 @@ footer a {
   }
   .div-info h4 {
     padding: 0 !important;
+  }
+
+  .all-projects .div-items {
+    margin: 0;
+  }
+
+  .footer-nav {
+    display: block;
   }
 }
