@@ -1,9 +1,21 @@
 :root {
-  --main-color: rgb(214, 18, 18);
-  --accent-color: rgba(4, 90, 124, 0.733);
+  --main-color: #003c08;
+  --accent-color: #55955b;
+  --h1font-size: 2em;
+  --h3-font-size: 1.5em;
+  --h5font-size: 1.25em;
+
+  /* h4, p(small) and small */
+  --smallfont-size: 0.8em;
+
+  /* p(large)*/
+  --largefont-size: 1em;
 }
 
+html,
 body {
+  width: 100%;
+  overflow-x: hidden;
   font-size: 1em;
 }
 nav {
@@ -28,7 +40,7 @@ h1.title {
 a {
   color: black;
   text-decoration: none;
-  font-size: 20px;
+  font-size: var(--smallfont-size);
   padding-left: 30px;
 }
 
@@ -118,18 +130,19 @@ input {
   margin-right: 20px;
   padding: 0;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: var(--smallfont-size);
   font-weight: bold;
 }
 h5 {
   text-transform: capitalize;
 }
 #intro-left small {
-  border-bottom: 1px solid var(--main-color);
+  color: white;
+  border-bottom: 1px solid white;
 }
 #intro-left p {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 13px;
+  font-size: var(--smallfont-size);
   width: 60%;
   text-transform: capitalize;
 }
@@ -144,64 +157,12 @@ h5 {
 }
 
 h1 {
-  font-size: 35px;
+  font-size: var(--h1font-size);
 }
 h3 {
-  font-size: 25px;
-}
-.page-div {
-  display: relative;
-}
-.div-items {
-  display: flex;
-  /* justify-content: space-evenly; */
-  margin-left: 20px;
-  overflow-x: scroll;
-  margin: 20px;
-}
-.div-items::-webkit-scrollbar,
-.top-categories::-webkit-scrollbar {
-  display: none;
-}
-.div-title {
-  height: 85px;
-  padding-top: 10px;
-}
-.div-title h1 {
-  margin-left: 20px;
-  display: inline-block;
-  /* float: left; */
+  font-size: var(--h3-font-size);
 }
 
-.div-item h4 {
-  font-size: 13px;
-  display: inline-block;
-}
-.div-item a {
-  margin: 0;
-}
-.div-item a {
-  font-size: 13px;
-}
-.div-item h3 {
-  font-weight: bold;
-  font-size: 20px;
-}
-.div-item p {
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.8);
-}
-.div-item .money {
-  font-size: 12px;
-}
-.div-item .raised {
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.8);
-}
-.div-item .percent {
-  font-size: 12px;
-  color: var(--accent-color);
-}
 #intro-right a,
 .parting-shot a {
   color: white;
@@ -211,8 +172,8 @@ h3 {
   margin-right: 20px;
 }
 
-.accent-color {
-  color: var(--accent-color);
+.accent-color-bg {
+  background-color: var(--accent-color);
   /* color: rgba(191, 204, 12, 0.733); */
 }
 
@@ -233,7 +194,7 @@ h3 {
 }
 .categories-title {
   margin-top: 40px;
-  font-size: 15px;
+  font-size: var(--smallfont-size);
   text-align: center;
   font-weight: normal;
 }
@@ -247,7 +208,7 @@ h3 {
   justify-content: center;
   padding: 0;
   margin: 0;
-  font-size: 15px;
+  font-size: var(--smallfont-size);
 }
 
 .extras {
@@ -264,7 +225,7 @@ h3 {
 }
 
 .parting-shot .money {
-  font-size: 13px;
+  font-size: var(--smallfont-size);
   color: rgba(0, 0, 0, 0.8);
 }
 
@@ -293,7 +254,7 @@ footer {
   /* margin-top: 50px; */
 }
 footer a {
-  font-size: 12px !important;
+  font-size: var(--smallfont-size) !important;
 }
 
 .footer-nav {
@@ -301,7 +262,7 @@ footer a {
   width: 100%;
   height: auto;
   padding: 30px;
-  background-color: rgba(4, 90, 124, 0.433);
+  background-color: var(--accent-color);
 }
 
 .footer-nav a {
@@ -327,11 +288,11 @@ footer a {
 }
 .item-info h5 {
   font-style: italic;
-  font-size: 13px;
+  font-size: var(--h5font-size);
   margin: 0;
 }
 .item-info small {
-  font-size: 11px;
+  font-size: var(--smallfont-size);
   margin: 0;
 }
 
@@ -357,13 +318,114 @@ footer a {
   visibility: hidden;
 }
 
+.popular-projects,
+.success-stories {
+  display: relative;
+}
+
+/* div-items in container div */
+.div-items {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 20px;
+  overflow-x: scroll;
+  margin: 20px;
+}
+
+.div-items::-webkit-scrollbar,
+.d-items::-webkit-scrollbar,
+.top-categories::-webkit-scrollbar {
+  display: none;
+}
+
+.div-item {
+  min-width: 20%;
+  max-width: 20%;
+  height: auto;
+  margin: 0;
+  margin-right: 20px;
+}
+
+.div-item img.item-img {
+  width: 100%;
+}
+
+.half-width {
+  width: 50%;
+}
+.div-items::-webkit-scrollbar,
+.top-categories::-webkit-scrollbar {
+  display: none;
+}
+.div-title {
+  height: 85px;
+  padding-top: 10px;
+}
+.div-title h1 {
+  margin-left: 20px;
+  display: inline-block;
+  /* float: left; */
+}
+
+.div-item h4 {
+  font-size: var(--smallfont-size);
+  display: inline-block;
+}
+.div-item a {
+  margin: 0;
+}
+.div-item a {
+  font-size: var(--smallfont-size);
+}
+.div-item h3 {
+  font-weight: bold;
+  font-size: var(--h3-font-size);
+}
+.div-item .money,
+.div-item .raised,
+.div-item p,
+.div-item .percent {
+  font-size: var(--smallfont-size);
+}
+.div-item .raised,
+.div-item p {
+  color: rgba(0, 0, 0, 0.8);
+}
+.div-item .percent {
+  color: var(--accent-color);
+}
+
 @media screen and (max-width: 768px) {
   nav a {
-    font-size: 15px;
+    font-size: var(--smallfont-size);
   }
 }
 
 @media screen and (max-width: 425px) {
+  :root {
+    --main-color: #003c08;
+    --accent-color: #55955b;
+    --h1font-size: 2em;
+    --h3-font-size: 1.5em;
+    --h5font-size: 1.25em;
+
+    /* h4, p(small) and small */
+    --smallfont-size: 0.8em;
+
+    /* p(large)*/
+    --largefont-size: 1em;
+  }
+
+  .p-large {
+    font-size: var(--largefont-size);
+  }
+
+  html,
+  body {
+    font-size: 0.8em;
+  }
   nav {
     display: flex;
     justify-content: space-around;
@@ -374,13 +436,13 @@ footer a {
     height: 60px;
   }
   nav h1 {
-    font-size: 20px;
+    /* font-size: var(--h1font-size); */
     margin: 0;
     /* padding-top: 10px; */
   }
-  nav a {
-    font-size: 8px;
-  }
+  /* nav a {
+    font-size: var(--smallfont-size);
+  } */
   .what-we-do,
   #navbar-right {
     visibility: hidden;
@@ -399,13 +461,13 @@ footer a {
     padding: 10px;
   }
 
-  a,
+  /* a,
   button {
-    font-size: 13px;
+    font-size: var(--smallfont-size);
   }
   h5 {
-    font-size: 20px;
-  }
+    font-size: var(--h5font-size);
+  } */
 
   #mid-nav a {
     margin-right: 30px;
@@ -426,24 +488,30 @@ footer a {
   }
   #intro-left p,
   #intro-left a {
-    font-size: 10px;
+    font-size: var(--smallfont-size);
   }
   #intro-right {
     margin-top: 20px;
   }
+
+  .div-item {
+    min-width: 40%;
+    max-width: 40%;
+  }
+  /*
   #intro-right h1 {
-    font-size: 20px;
+    font-size: var(--h1font-size);
   }
   #intro-right h3 {
-    font-size: 15px;
+    font-size: var(--h3-font-size);
   }
   #intro-right p {
-    font-size: 12px;
+    font-size: var(--smallfont-size);
   }
 
   .div-title h1 {
-    font-size: 22px;
-  }
+    font-size: var(--h1font-size);
+  } */
   .controls {
     right: 20px;
   }
@@ -467,7 +535,6 @@ footer a {
     margin: 0;
   }
   .div-info h4 {
-    font-size: 10px;
     padding: 0 !important;
   }
 }
