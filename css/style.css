@@ -180,11 +180,6 @@ h3 {
 .underline {
   border-bottom: 1px solid var(--main-color);
 }
-
-.link-item {
-  margin: 0;
-  padding: 0;
-}
 .top-categories {
   margin-top: 20px;
   display: flex;
@@ -326,6 +321,47 @@ footer a {
   display: relative;
 }
 
+.tabContent {
+  position: relative;
+}
+
+.tab {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--accent-color);
+}
+
+.tablinks {
+  outline: none;
+  background-color: transparent;
+  color: white;
+  border: none;
+  text-align: left;
+  border-right: 1px solid white;
+  padding-right: 30px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  color: var(--main-color);
+  outline: none;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  color: var(--main-color);
+  outline: none;
+}
+
+.tab button:visited {
+  color: var(--main-color);
+  outline: none;
+}
+
 /* div-items in container div */
 .div-items {
   width: 100%;
@@ -348,6 +384,13 @@ footer a {
   display: none;
 }
 
+.link-item {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .div-item {
   min-width: 20%;
   max-width: 20%;
@@ -362,6 +405,32 @@ footer a {
 
 .half-width {
   width: 50%;
+}
+.three-quater-width {
+  width: 75%;
+}
+.quater-width {
+  width: 25%;
+}
+.overflow {
+  overflow: hidden;
+}
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+  padding: 30px;
+}
+.back-it {
+  display: block;
+  background-color: var(--main-color);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .div-items::-webkit-scrollbar,
 .top-categories::-webkit-scrollbar {

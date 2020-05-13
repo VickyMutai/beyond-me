@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beyond Me</title>
+
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <script href="../js/script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="full-width">
+        <div id="navbar-left" class="half-width">
+          <a href="../index.html"><h1 class="title">Beyond Me</h1></a>
+          <a class="what-we-do" href="">What We Do</a>
+        </div>
+        <div class="navbar-right-sm half-width">
+          <img class="icon20" src="../imgs/icons/menu.svg" alt="" />
+        </div>
+        <div id="navbar-right" class="half-width">
+          <a href="">Start a Campaign</a>
+          <a href="">Log In</a>
+          <a href="">Sign Up</a>
+        </div>
+      </nav>
+      <div id="mid-nav">
+        <a href="../campaigns/index.html"
+          >Explore
+          <img class="icon rotate" src="../imgs/icons/next.png" alt="" />
+        </a>
+        <form action="" method="get">
+          <input type="text" name="search" id="" />
+          <button id="btn-search" type="submit">
+            <img class="icon" src="../imgs/icons/search.png" alt="" /> Search
+          </button>
+        </form>
+      </div>
+
+      <section class="project-details">
+        <iframe
+          class="half-width full-width"
+          height="300px"
+          src="https://www.youtube.com/embed/a9NVJIM8w40"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <div class="float-right half-width full-width">
+          <h3>Lorem, ipsum dolor.</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere hic
+            earum facilis distinctio eveniet delectus quaerat. Suscipit
+            aspernatur molestiae ea.
+          </p>
+
+          <h4>CATEGORY</h4>
+          <br />
+          <span class="money">KES102,523</span>
+          <small class="raised">raised</small>
+          <span class="percent">200%</span><br />
+          <div class="progress">
+            <div
+              class="progress-bar accent-color-bg"
+              role="progressbar"
+              style="width: 56%;"
+              aria-valuenow="56"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <small>5 days left</small>
+          <a class="back-it" href="">Back it Up</a>
+        </div>
+        <div class="specifics">
+          <!-- Tab links -->
+          <div class="tab">
+            <button class="tablinks" onclick="openDetail(event, 'campaign')">
+              Campaign
+            </button>
+            <button class="tablinks" onclick="openDetail(event, 'faq')">
+              FAQ
+            </button>
+            <button class="tablinks" onclick="openDetail(event, 'updates')">
+              Updates
+            </button>
+            <button class="tablinks" onclick="openDetail(event, 'comments')">
+              Comments
+            </button>
+            <button class="tablinks" onclick="openDetail(event, 'community')">
+              Community
+            </button>
+          </div>
+
+          <!-- Tab content -->
+          <div id="campaign" class="tabcontent overflow">
+            <div
+              class="three-quater-width full-width campaign-details float-left"
+            >
+              <img src="../imgs/img1.jpg" alt="" />
+              <h3>Third Edition Of the Suit</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
+                ducimus blanditiis molestias nisi illo quasi in vitae animi
+                placeat vero. Totam accusamus repellat quidem perferendis
+                ratione soluta eaque fuga, ullam odit dolorum facere sit neque
+                facilis! Consectetur impedit enim mollitia aspernatur animi
+                corporis dolorum perspiciatis placeat eaque, fuga dignissimos
+                quaerat?
+              </p>
+            </div>
+
+            <div class="quater-width full-width float-right">
+              <h3>Recommended Projects</h3>
+              <div class="pick-item">
+                <img src="../imgs/img2.jpg" alt="" />
+                <div class="item-info">
+                  <h5>Lorem, ipsum dolor.</h5>
+                  <small class="underline">KES102,523 raised</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-nav">
+          <div class="half-width full-width">
+            <div class="full-width">
+              <h4>Explore</h4>
+            </div>
+            <a href="">Home</a><br />
+            <a href="">What We Do</a><br />
+            <a href="">Categories</a>
+          </div>
+          <div class="half-width full-width">
+            <div class="full-width">
+              <h4>More About Us</h4>
+            </div>
+            <a href="">Start a Campaign</a><br />
+            <a href="">Community Stories</a><br />
+            <a href="">Help & Support</a>
+          </div>
+          <div class="half-width full-width">
+            <div class="full-width">
+              <h4>Today's Pick</h4>
+            </div>
+            <div class="pick-item">
+              <img src="../imgs/img2.jpg" alt="" />
+              <div class="item-info">
+                <h5>Lorem, ipsum dolor.</h5>
+                <small class="underline">KES102,523 raised</small>
+              </div>
+            </div>
+            <div class="pick-item">
+              <img src="../imgs/img2.jpg" alt="" />
+              <div class="item-info">
+                <h5>Lorem, ipsum dolor.</h5>
+                <small class="underline">KES102,523 raised</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright full-width">
+          <small
+            >Beyond Me&trade;. 2020 copyright &copy; All rights Reserved.</small
+          ><br /><small>Design by </small> <a href="">Doreen Chemweno.</a>
+        </div>
+      </footer>
+    </div>
+    <!-- bootstrap js -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
