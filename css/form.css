@@ -11,7 +11,13 @@
   /* p(large)*/
   --largefont-size: 1em;
 }
-.start-campaign {
+html,
+body {
+  height: 100%;
+}
+.start-campaign,
+.sign-in,
+.sign-up {
   position: relative;
   height: 80%;
   border: 1px solid var(--main-color);
@@ -59,6 +65,22 @@ input {
 #section-c {
   z-index: 400;
   background-color: white;
+}
+button {
+  margin-left: 47%;
+}
+.auth-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 768px) {
+  .quater-left {
+    margin-left: 10%;
+  }
+  .full-width {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 425px) {
