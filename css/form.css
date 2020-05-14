@@ -1,0 +1,68 @@
+:root {
+  --main-color: #003c08;
+  --accent-color: #55955b;
+  --h1font-size: 2em;
+  --h3-font-size: 1.5em;
+  --h5font-size: 1.25em;
+
+  /* h4, p(small) and small */
+  --smallfont-size: 0.8em;
+
+  /* p(large)*/
+  --largefont-size: 1em;
+}
+.start-campaign {
+  position: relative;
+  height: 80%;
+  border: 1px solid var(--main-color);
+  padding: 20px;
+  margin-top: 50px;
+  /* margin-bottom: 50px; */
+}
+form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.visibility {
+  visibility: hidden;
+  display: none;
+}
+
+.quater-left {
+  margin-left: 25%;
+}
+
+textarea {
+  width: 100%;
+}
+
+input {
+  margin: 20px;
+  padding: 5px;
+}
+
+#section-a,
+#section-b,
+#section-c {
+  position: absolute;
+}
+#section-a {
+  z-index: 1;
+}
+#section-b {
+  background-color: white;
+  z-index: 200;
+}
+#section-c {
+  z-index: 400;
+  background-color: white;
+}
+
+@media screen and (max-width: 425px) {
+  .quater-left {
+    margin-left: 0;
+  }
+}

@@ -18,3 +18,8 @@ function openDetail(evt, tabName) {
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+function visibility(seen, notSeen) {
+  seen.classList.add("visibility");
+  notSeen.classList.remove("visibility");
+}
