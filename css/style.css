@@ -63,7 +63,7 @@ a:hover {
   padding-top: 10px;
 }
 form {
-  display: inline-block;
+  width: 60%;
 }
 
 input {
@@ -612,13 +612,14 @@ main {
   }
   .navbar-right-sm {
     visibility: visible;
-    display: inline-block;
-    margin-left: 45px;
+    display: flex;
+    justify-content: space-around;
+    /* margin-left: 45px; */
   }
 
   #mid-nav {
     width: 100%;
-    display: block;
+    display: flex;
     margin: 0;
     padding: 10px;
   }
