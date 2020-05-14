@@ -77,7 +77,7 @@ input {
 #btn-search {
   outline: none;
   color: black;
-  margin-left: -80px;
+  margin-left: -50px;
   background-color: white;
   border: none;
 }
@@ -609,6 +609,13 @@ main {
   #navbar-right {
     visibility: hidden;
     display: none;
+  }
+  #navbar-right {
+    background-color: white;
+    width: 40%;
+  }
+  #navbar-right a {
+    display: block !important;
   }
   .navbar-right-sm {
     visibility: visible;

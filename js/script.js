@@ -23,3 +23,17 @@ function visibility(seen, notSeen) {
   seen.classList.add("visibility");
   notSeen.classList.remove("visibility");
 }
+
+let state = false;
+function showNav(notSeen, width) {
+  if (screen.width <= width && state === false) {
+    notSeen.style = "visibility:visible; display:block";
+    state = true;
+  } else if (screen.width <= width && state === true) {
+    notSeen.style = "visibility:hidden; display:none";
+    state = false;
+  }
+  // document.addEventListener("click", function () {
+  //   notSeen.style = "visibility:hidden; display:none";
+  // });
+}
