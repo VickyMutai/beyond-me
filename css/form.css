@@ -85,6 +85,6 @@ button {
 
 @media screen and (max-width: 425px) {
   .quater-left {
-    margin-left: 0;
+    margin-left: 10%;
   }
 }
