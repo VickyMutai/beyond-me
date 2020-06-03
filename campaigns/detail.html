@@ -55,30 +55,32 @@
           allowfullscreen
         ></iframe>
         <div class="float-right half-width full-width">
-          <h3>Lorem, ipsum dolor.</h3>
+          <h3>Fundraising for Coronavirus Relief</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere hic
-            earum facilis distinctio eveniet delectus quaerat. Suscipit
-            aspernatur molestiae ea.
+            As COVID-19 continues to spread, more individuals, communities, and
+            entire nations are feeling the impact in their daily lives. Beyond
+            the global health crisis, the coronavirus is having a severe
+            economic impact on individuals, small businesses, and medical
+            organizations.
           </p>
 
-          <h4>CATEGORY</h4>
-          <br />
+          <small class="money">Health |</small>
+          <small> Eldoret, Kenya</small><br />
           <span class="money">KES102,523</span>
           <small class="raised">raised</small>
-          <span class="percent">200%</span><br />
+          <span class="percent">60%</span><br />
           <div class="progress">
             <div
               class="progress-bar accent-color-bg"
               role="progressbar"
-              style="width: 56%;"
-              aria-valuenow="56"
+              style="width: 60%;"
+              aria-valuenow="60"
               aria-valuemin="0"
               aria-valuemax="100"
             ></div>
           </div>
           <small>5 days left</small>
-          <a class="back-it" href="">Back it Up</a>
+          <a class="back-it" onclick="backItModal()">Back it Up</a>
         </div>
         <div class="specifics">
           <!-- Tab links -->
@@ -106,19 +108,34 @@
               class="three-quater-width full-width campaign-details float-left"
             >
               <img src="../imgs/img1.jpg" alt="" />
-              <h3>Third Edition Of the Suit</h3>
+              <h3>
+                Fundraising for Coronavirus Relief: How You Can Help the Fight
+              </h3>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
-                ducimus blanditiis molestias nisi illo quasi in vitae animi
-                placeat vero. Totam accusamus repellat quidem perferendis
-                ratione soluta eaque fuga, ullam odit dolorum facere sit neque
-                facilis! Consectetur impedit enim mollitia aspernatur animi
-                corporis dolorum perspiciatis placeat eaque, fuga dignissimos
-                quaerat?
+                The only thing that’s certain at this point about the
+                coronavirus (COVID-19) is that it’s a respiratory infection that
+                can be transmitted from person to person. Aside from this,
+                scientists are still uncovering other factors about the disease
+                and its spread. For this reason, it’s important to rely on the
+                advice of medical experts and be wary of misinformation that is
+                circulating, such as unproven cures and ways to fight the
+                disease. To get coronavirus facts, the Centers for Disease
+                Control and Prevention (CDC) is a great place to start.<br />
+                As of today, the CDC has provided numerous resources with
+                ever-evolving information about the disease, and even steps to
+                prevent the illness. It’s also good to remember basic tips on
+                cleanliness that can reduce your risk of contracting the
+                disease, such as washing your hands often, not touching your
+                face, and staying away from crowded events or areas. If you want
+                to take added steps to prevent your risk of exposure, look to
+                the CDC’s travel notices, which include information about
+                high-risk regions. Once you ensure you’re taking the necessary
+                steps to reduce your own risk, consider helping others that may
+                not have as many options.
               </p>
             </div>
 
-            <div class="quater-width full-width float-right">
+            <!-- <div class="quater-width full-width float-right">
               <h3>Recommended Projects</h3>
               <div class="pick-item">
                 <img src="../imgs/img2.jpg" alt="" />
@@ -127,7 +144,7 @@
                   <small class="underline">KES102,523 raised</small>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <div id="faq" class="tabcontent overflow">
@@ -142,7 +159,7 @@
               </form>
             </div>
 
-            <div class="quater-width full-width float-right">
+            <!-- <div class="quater-width full-width float-right">
               <h3>Recommended Projects</h3>
               <div class="pick-item">
                 <img src="../imgs/img2.jpg" alt="" />
@@ -151,7 +168,7 @@
                   <small class="underline">KES102,523 raised</small>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <div id="updates" class="tabcontent overflow">
@@ -193,7 +210,7 @@
               </form>
             </div>
 
-            <div class="quater-width full-width float-right">
+            <!-- <div class="quater-width full-width float-right">
               <h3>Recommended Projects</h3>
               <div class="pick-item">
                 <img src="../imgs/img2.jpg" alt="" />
@@ -202,7 +219,7 @@
                   <small class="underline">KES102,523 raised</small>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <div id="community" class="tabcontent overflow">
@@ -222,7 +239,7 @@
               </p>
             </div>
 
-            <div class="quater-width full-width float-right">
+            <!-- <div class="quater-width full-width float-right">
               <h3>Recommended Projects</h3>
               <div class="pick-item">
                 <img src="../imgs/img2.jpg" alt="" />
@@ -231,7 +248,7 @@
                   <small class="underline">KES102,523 raised</small>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -280,6 +297,24 @@
           ><br /><small>Design by </small> <a href="">Doreen Chemweno.</a>
         </div>
       </footer>
+
+      <div id="backit-modal">
+        <h3>Support Project</h3>
+        <p>
+          Thank you for choosing to support this project. We appreciate your
+          support.
+        </p>
+        <input type="text" name="name" placeholder="Full Name" />
+        <input type="text" name="email" placeholder="Email Address" />
+        <input type="tel" name="phone" placeholder="Phone Number" />
+        <input
+          type="number"
+          name="contribution"
+          placeholder="Contribution Amount"
+        /><br />
+        <button onclick="cancel()" class="cancel">Cancel</button>
+        <button type="submit">Proceed</button>
+      </div>
     </div>
     <!-- bootstrap js -->
     <script

@@ -37,3 +37,19 @@ function showNav(notSeen, width) {
   //   notSeen.style = "visibility:hidden; display:none";
   // });
 }
+
+function backItModal() {
+  let backIt = document.getElementById("backit-modal");
+  let page = document.getElementsByClassName("project-details")[0];
+  console.log(backIt);
+  backIt.style = "visibility:visible; display:block;";
+  page.style = "visibility:hidden; display:none;";
+}
+
+function cancel() {
+  let backIt = document.getElementById("backit-modal");
+  let page = document.getElementsByClassName("project-details")[0];
+  console.log(backIt);
+  backIt.style = "visibility:hidden; display:none;";
+  page.style = "visibility:visible; display:'';";
+}

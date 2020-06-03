@@ -34,6 +34,17 @@ h1.title {
   display: inline-block;
 }
 
+button {
+  background-color: #003c08;
+  margin-top: 20px;
+  color: white;
+  border: 1px solid #003c08;
+}
+
+button.cancel {
+  background-color: white;
+  color: black;
+}
 #navbar-left {
   float: left;
 }
@@ -375,6 +386,21 @@ footer a {
   animation: fadeEffect 1s; /* Fading effect takes 1 second */
 }
 
+/* Back it up modal */
+#backit-modal {
+  position: absolute;
+  z-index: 1500;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 25% 15% 25% 15%;
+  background-color: white;
+  /* padding: 20px; */
+  box-shadow: #003c08;
+  visibility: hidden;
+  display: none;
+}
+
 /* Go from zero to full opacity */
 @keyframes fadeEffect {
   from {
@@ -449,7 +475,7 @@ footer a {
 .back-it {
   display: block;
   background-color: var(--main-color);
-  color: white;
+  color: white !important;
   text-align: center;
   padding: 10px;
   margin-top: 10px;
