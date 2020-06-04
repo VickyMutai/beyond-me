@@ -686,10 +686,15 @@ input.search {
   }
   #navbar-right {
     background-color: white;
-    width: 40%;
+    left: 30%;
+    width: 65%;
+    position: absolute;
+    z-index: 2000;
   }
   #navbar-right a {
     display: block !important;
+    font-size: var(--h5font-size);
+    padding: 5px;
   }
   .navbar-right-sm {
     visibility: visible;
