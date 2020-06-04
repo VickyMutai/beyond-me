@@ -24,25 +24,21 @@
           <a class="what-we-do" href="">What We Do</a>
         </div>
         <div class="navbar-right-sm half-width">
-          <img class="icon20" src="../imgs/icons/menu.svg" alt="" />
+          <img
+            onclick="showNav(document.getElementById('navbar-right'), 425)"
+            class="icon20"
+            src="./imgs/icons/menu.svg"
+            alt=""
+          />
         </div>
         <div id="navbar-right" class="half-width">
-          <a href="../campaigns/create.html">Start a Campaign</a>
-          <a href="">Log In</a>
-          <a href="">Sign Up</a>
+          <a href="./campaigns/create.html">Start a Campaign</a>
+          <a href="./auth/signin.html">Sign In</a>
+          <a href="./auth/register.html">Sign Up</a>
         </div>
       </nav>
       <div id="mid-nav">
-        <a href="../campaigns/index.html"
-          >Explore
-          <img class="icon rotate" src="../imgs/icons/next.png" alt="" />
-        </a>
-        <form action="" method="get">
-          <input type="text" name="search" id="" />
-          <button id="btn-search" type="submit">
-            <img class="icon" src="../imgs/icons/search.png" alt="" /> Search
-          </button>
-        </form>
+        <a href="./campaigns/index.html">Explore Categories </a>
       </div>
 
       <section class="project-details">
