@@ -582,7 +582,8 @@ input.search {
 /* forever not visible - used it for styling filters (apart from #filter-icon) */
 .category-filter,
 .city-filter,
-#filter-icon {
+#filter-icon,
+aside i {
   display: none;
   visibility: hidden;
 }
@@ -619,9 +620,14 @@ input.search {
   main {
     width: 100%;
   }
-  #filter-icon {
+  #filter-icon,
+  aside i {
     visibility: visible;
     display: block;
+  }
+  aside i {
+    display: flex !important;
+    justify-content: space-around;
   }
   .all-projects {
     margin-top: 0;
