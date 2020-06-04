@@ -13,7 +13,14 @@
       crossorigin="anonymous"
     />
 
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/b6ab15a97c.js"
+      crossorigin="anonymous"
+    ></script>
+
     <link rel="stylesheet" href="../css/style.css" />
+    <script defer src="../js/script.js"></script>
   </head>
   <body>
     <div class="container">
@@ -32,30 +39,55 @@
         </div>
       </nav>
       <div id="mid-nav">
-        <a href="./campaigns/index.html"
-          >Explore
-          <img class="icon rotate" src="./imgs/icons/next.png" alt="" />
-        </a>
-        <form action="" method="get">
-          <input type="text" name="search" id="" />
-          <button id="btn-search" type="submit">
+        <i
+          id="filter-icon"
+          class="fas fa-filter fa-2x"
+          onclick="showFilter(true)"
+        ></i>
+        <!-- <form action="" method="get"> -->
+        <input
+          class="search"
+          type="text"
+          name="search"
+          placeholder="search category..."
+          id="search"
+        />
+        <!-- <button id="btn-search" type="submit">
             <img class="icon" src="./imgs/icons/search.png" alt="" /> Search
-          </button>
-        </form>
+          </button> -->
+        <!-- </form> -->
       </div>
       <section id="all-projects">
         <aside class="visibility">
+          <i onclick="closeFilter()" class="fas fa-times"></i>
           <div class="aside-item">
             <div class="item-title">
               <h3>Categories</h3>
             </div>
             <div class="item-content">
-              <p>All Categories</p>
-              <p>Tech & Innovation</p>
-              <p>Education</p>
-              <p>Entertainment</p>
-              <p>Art & Craft</p>
-              <p>Community Projects</p>
+              <input
+                type="checkbox"
+                class="item"
+                id="tech"
+                value="Technology"
+              />
+              <label for="tech">Technology</label>
+              <input type="checkbox" class="item" id="health" value="Health" />
+              <label for="health">Health</label>
+              <input
+                type="checkbox"
+                class="item"
+                id="business"
+                value="Business"
+              />
+              <label for="business">Business</label>
+              <input
+                type="checkbox"
+                class="item"
+                id="agric"
+                value="Agriculture"
+              />
+              <label for="agric">Agriculture</label>
             </div>
           </div>
           <hr />
@@ -64,10 +96,27 @@
               <h3>Project Timing</h3>
             </div>
             <div class="item-content">
-              <p>All Projects</p>
-              <p>Launching Soon</p>
-              <p>Just Launched</p>
-              <p>Ending Soon</p>
+              <input
+                type="checkbox"
+                id="launching-soon"
+                class="item"
+                value="launching-soon"
+              />
+              <label for="launching-soon">Launching Soon</label>
+              <input
+                type="checkbox"
+                id="just-launched"
+                class="item"
+                value="just-launched"
+              />
+              <label for="just-launched">Just Launched</label>
+              <input
+                type="checkbox"
+                id="ending-soon"
+                class="item"
+                value="ending-soon"
+              />
+              <label for="ending-soon">Ending Soon</label>
             </div>
           </div>
           <hr />
@@ -79,7 +128,7 @@
               <input
                 type="text"
                 name=""
-                id="location"
+                id="location-search"
                 placeholder="search location eg. nairobi"
               />
             </div>
@@ -100,7 +149,7 @@
                 <a class="link-item" href="./detail.html">
                   <img class="item-img" src="../imgs/img1.jpg" alt="" />
                   <div class="div-info">
-                    <h4 class="half-width">FUNDING</h4>
+                    <h4 class="half-width">Eldoret</h4>
                     <a href="" class="half-width">
                       <img class="icon20" src="../imgs/icons/heart.svg" alt=""
                     /></a>
@@ -111,7 +160,7 @@
                       quaerat. Suscipit aspernatur molestiae ea.
                     </p>
 
-                    <h4>CATEGORY</h4>
+                    <h4 class="category">Health</h4>
                     <br />
                     <span class="money">KES102,523</span>
                     <small class="raised">raised</small>
@@ -129,244 +178,261 @@
                     <small>5 days left</small>
                   </div>
                 </a>
+
+                <h4 class="category-filter">Health</h4>
+                <h4 class="city-filter">Eldoret</h4>
               </div>
               <div class="div-item">
-                <!-- <a class="link-item" href=""> -->
-                <img class="item-img" src="../imgs/img1.jpg" alt="" />
-                <div class="div-info">
-                  <h4 class="half-width">FUNDING</h4>
-                  <a href="" class="half-width">
-                    <img class="icon20" src="../imgs/icons/heart.svg" alt=""
-                  /></a>
-                  <h3>Lorem, ipsum dolor.</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Facere hic earum facilis distinctio eveniet delectus
-                    quaerat. Suscipit aspernatur molestiae ea.
-                  </p>
+                <a class="link-item" href="">
+                  <img class="item-img" src="../imgs/img1.jpg" alt="" />
+                  <div class="div-info">
+                    <h4 class="half-width">Mombasa</h4>
+                    <a href="" class="half-width">
+                      <img class="icon20" src="../imgs/icons/heart.svg" alt=""
+                    /></a>
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facere hic earum facilis distinctio eveniet delectus
+                      quaerat. Suscipit aspernatur molestiae ea.
+                    </p>
 
-                  <h4>CATEGORY</h4>
-                  <br />
-                  <span class="money">KES102,523</span>
-                  <small class="raised">raised</small>
-                  <span class="percent">200%</span><br />
-                  <div class="progress">
-                    <div
-                      class="progress-bar accent-color-bg"
-                      role="progressbar"
-                      style="width: 56%;"
-                      aria-valuenow="56"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
+                    <h4 class="category">Agriculture</h4>
+                    <br />
+                    <span class="money">KES102,523</span>
+                    <small class="raised">raised</small>
+                    <span class="percent">200%</span><br />
+                    <div class="progress">
+                      <div
+                        class="progress-bar accent-color-bg"
+                        role="progressbar"
+                        style="width: 56%;"
+                        aria-valuenow="56"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <small>5 days left</small>
                   </div>
-                  <small>5 days left</small>
-                </div>
-                <!-- </a> -->
+                </a>
+                <h4 class="category-filter">Agriculture</h4>
+                <h4 class="city-filter">Mombasa</h4>
               </div>
               <div class="div-item">
-                <!-- <a class="link-item" href=""> -->
-                <img class="item-img" src="../imgs/img1.jpg" alt="" />
-                <div class="div-info">
-                  <h4 class="half-width">FUNDING</h4>
-                  <a href="" class="half-width">
-                    <img class="icon20" src="../imgs/icons/heart.svg" alt=""
-                  /></a>
-                  <h3>Lorem, ipsum dolor.</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Facere hic earum facilis distinctio eveniet delectus
-                    quaerat. Suscipit aspernatur molestiae ea.
-                  </p>
+                <a class="link-item" href="">
+                  <img class="item-img" src="../imgs/img1.jpg" alt="" />
+                  <div class="div-info">
+                    <h4 class="half-width">Nairobi</h4>
+                    <a href="" class="half-width">
+                      <img class="icon20" src="../imgs/icons/heart.svg" alt=""
+                    /></a>
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facere hic earum facilis distinctio eveniet delectus
+                      quaerat. Suscipit aspernatur molestiae ea.
+                    </p>
 
-                  <h4>CATEGORY</h4>
-                  <br />
-                  <span class="money">KES102,523</span>
-                  <small class="raised">raised</small>
-                  <span class="percent">200%</span><br />
-                  <div class="progress">
-                    <div
-                      class="progress-bar accent-color-bg"
-                      role="progressbar"
-                      style="width: 56%;"
-                      aria-valuenow="56"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
+                    <h4 class="category">Technology</h4>
+                    <br />
+                    <span class="money">KES102,523</span>
+                    <small class="raised">raised</small>
+                    <span class="percent">200%</span><br />
+                    <div class="progress">
+                      <div
+                        class="progress-bar accent-color-bg"
+                        role="progressbar"
+                        style="width: 56%;"
+                        aria-valuenow="56"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <small>5 days left</small>
                   </div>
-                  <small>5 days left</small>
-                </div>
-                <!-- </a> -->
+                </a>
+                <h4 class="category-filter invisible">Technology</h4>
+                <h4 class="city-filter invisible">Nairobi</h4>
               </div>
               <div class="div-item">
-                <!-- <a class="link-item" href=""> -->
-                <img class="item-img" src="../imgs/img1.jpg" alt="" />
-                <div class="div-info">
-                  <h4 class="half-width">FUNDING</h4>
-                  <a href="" class="half-width">
-                    <img class="icon20" src="../imgs/icons/heart.svg" alt=""
-                  /></a>
-                  <h3>Lorem, ipsum dolor.</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Facere hic earum facilis distinctio eveniet delectus
-                    quaerat. Suscipit aspernatur molestiae ea.
-                  </p>
+                <a class="link-item" href="">
+                  <img class="item-img" src="../imgs/img1.jpg" alt="" />
+                  <div class="div-info">
+                    <h4 class="half-width">Nairobi</h4>
+                    <a href="" class="half-width">
+                      <img class="icon20" src="../imgs/icons/heart.svg" alt=""
+                    /></a>
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facere hic earum facilis distinctio eveniet delectus
+                      quaerat. Suscipit aspernatur molestiae ea.
+                    </p>
 
-                  <h4>CATEGORY</h4>
-                  <br />
-                  <span class="money">KES102,523</span>
-                  <small class="raised">raised</small>
-                  <span class="percent">200%</span><br />
-                  <div class="progress">
-                    <div
-                      class="progress-bar accent-color-bg"
-                      role="progressbar"
-                      style="width: 56%;"
-                      aria-valuenow="56"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
+                    <h4 class="category">Agriculture</h4>
+                    <br />
+                    <span class="money">KES102,523</span>
+                    <small class="raised">raised</small>
+                    <span class="percent">200%</span><br />
+                    <div class="progress">
+                      <div
+                        class="progress-bar accent-color-bg"
+                        role="progressbar"
+                        style="width: 56%;"
+                        aria-valuenow="56"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <small>5 days left</small>
                   </div>
-                  <small>5 days left</small>
-                </div>
-                <!-- </a> -->
+                </a>
+                <h4 class="city-filter invisible">Nairobi</h4>
+                <h4 class="category-filter invisible">Agriculture</h4>
               </div>
               <div class="div-item">
-                <!-- <a class="link-item" href=""> -->
-                <img class="item-img" src="../imgs/img1.jpg" alt="" />
-                <div class="div-info">
-                  <h4 class="half-width">FUNDING</h4>
-                  <a href="" class="half-width">
-                    <img class="icon20" src="../imgs/icons/heart.svg" alt=""
-                  /></a>
-                  <h3>Lorem, ipsum dolor.</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Facere hic earum facilis distinctio eveniet delectus
-                    quaerat. Suscipit aspernatur molestiae ea.
-                  </p>
+                <a class="link-item" href="">
+                  <img class="item-img" src="../imgs/img1.jpg" alt="" />
+                  <div class="div-info">
+                    <h4 class="half-width">Bungoma</h4>
+                    <a href="" class="half-width">
+                      <img class="icon20" src="../imgs/icons/heart.svg" alt=""
+                    /></a>
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facere hic earum facilis distinctio eveniet delectus
+                      quaerat. Suscipit aspernatur molestiae ea.
+                    </p>
 
-                  <h4>CATEGORY</h4>
-                  <br />
-                  <span class="money">KES102,523</span>
-                  <small class="raised">raised</small>
-                  <span class="percent">200%</span><br />
-                  <div class="progress">
-                    <div
-                      class="progress-bar accent-color-bg"
-                      role="progressbar"
-                      style="width: 56%;"
-                      aria-valuenow="56"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
+                    <h4 class="category">Technology</h4>
+                    <br />
+                    <span class="money">KES102,523</span>
+                    <small class="raised">raised</small>
+                    <span class="percent">200%</span><br />
+                    <div class="progress">
+                      <div
+                        class="progress-bar accent-color-bg"
+                        role="progressbar"
+                        style="width: 56%;"
+                        aria-valuenow="56"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <small>5 days left</small>
                   </div>
-                  <small>5 days left</small>
-                </div>
-                <!-- </a> -->
+                </a>
+                <h4 class="city-filter invisible">Bungoma</h4>
+                <h4 class="category-filter invisible">Technology</h4>
               </div>
               <div class="div-item">
-                <!-- <a class="link-item" href=""> -->
-                <img class="item-img" src="../imgs/img1.jpg" alt="" />
-                <div class="div-info">
-                  <h4 class="half-width">FUNDING</h4>
-                  <a href="" class="half-width">
-                    <img class="icon20" src="../imgs/icons/heart.svg" alt=""
-                  /></a>
-                  <h3>Lorem, ipsum dolor.</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Facere hic earum facilis distinctio eveniet delectus
-                    quaerat. Suscipit aspernatur molestiae ea.
-                  </p>
+                <a class="link-item" href="">
+                  <img class="item-img" src="../imgs/img1.jpg" alt="" />
+                  <div class="div-info">
+                    <h4 class="half-width">Kisumu</h4>
+                    <a href="" class="half-width">
+                      <img class="icon20" src="../imgs/icons/heart.svg" alt=""
+                    /></a>
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facere hic earum facilis distinctio eveniet delectus
+                      quaerat. Suscipit aspernatur molestiae ea.
+                    </p>
 
-                  <h4>CATEGORY</h4>
-                  <br />
-                  <span class="money">KES102,523</span>
-                  <small class="raised">raised</small>
-                  <span class="percent">200%</span><br />
-                  <div class="progress">
-                    <div
-                      class="progress-bar accent-color-bg"
-                      role="progressbar"
-                      style="width: 56%;"
-                      aria-valuenow="56"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
+                    <h4 class="category">Health</h4>
+                    <br />
+                    <span class="money">KES102,523</span>
+                    <small class="raised">raised</small>
+                    <span class="percent">200%</span><br />
+                    <div class="progress">
+                      <div
+                        class="progress-bar accent-color-bg"
+                        role="progressbar"
+                        style="width: 56%;"
+                        aria-valuenow="56"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <small>5 days left</small>
                   </div>
-                  <small>5 days left</small>
-                </div>
-                <!-- </a> -->
+                </a>
+                <h4 class="city-filter invisible">Kisumu</h4>
+                <h4 class="category-filter invisible">Health</h4>
               </div>
               <div class="div-item">
-                <!-- <a class="link-item" href=""> -->
-                <img class="item-img" src="../imgs/img1.jpg" alt="" />
-                <div class="div-info">
-                  <h4 class="half-width">FUNDING</h4>
-                  <a href="" class="half-width">
-                    <img class="icon20" src="../imgs/icons/heart.svg" alt=""
-                  /></a>
-                  <h3>Lorem, ipsum dolor.</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Facere hic earum facilis distinctio eveniet delectus
-                    quaerat. Suscipit aspernatur molestiae ea.
-                  </p>
+                <a class="link-item" href="">
+                  <img class="item-img" src="../imgs/img1.jpg" alt="" />
+                  <div class="div-info">
+                    <h4 class="half-width">Eldoret</h4>
+                    <a href="" class="half-width">
+                      <img class="icon20" src="../imgs/icons/heart.svg" alt=""
+                    /></a>
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facere hic earum facilis distinctio eveniet delectus
+                      quaerat. Suscipit aspernatur molestiae ea.
+                    </p>
 
-                  <h4>CATEGORY</h4>
-                  <br />
-                  <span class="money">KES102,523</span>
-                  <small class="raised">raised</small>
-                  <span class="percent">200%</span><br />
-                  <div class="progress">
-                    <div
-                      class="progress-bar accent-color-bg"
-                      role="progressbar"
-                      style="width: 56%;"
-                      aria-valuenow="56"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
+                    <h4 class="category">Technology</h4>
+                    <br />
+                    <span class="money">KES102,523</span>
+                    <small class="raised">raised</small>
+                    <span class="percent">200%</span><br />
+                    <div class="progress">
+                      <div
+                        class="progress-bar accent-color-bg"
+                        role="progressbar"
+                        style="width: 56%;"
+                        aria-valuenow="56"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <small>5 days left</small>
                   </div>
-                  <small>5 days left</small>
-                </div>
-                <!-- </a> -->
+                </a>
+                <h4 class="city-filter invisible">Eldoret</h4>
+                <h4 class="category-filter invisible">Technology</h4>
               </div>
               <div class="div-item">
-                <!-- <a class="link-item" href=""> -->
-                <img class="item-img" src="../imgs/img1.jpg" alt="" />
-                <div class="div-info">
-                  <h4 class="half-width">FUNDING</h4>
-                  <a href="" class="half-width">
-                    <img class="icon20" src="../imgs/icons/heart.svg" alt=""
-                  /></a>
-                  <h3>Lorem, ipsum dolor.</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Facere hic earum facilis distinctio eveniet delectus
-                    quaerat. Suscipit aspernatur molestiae ea.
-                  </p>
+                <a class="link-item" href="">
+                  <img class="item-img" src="../imgs/img1.jpg" alt="" />
+                  <div class="div-info">
+                    <h4 class="half-width">Eldoret</h4>
+                    <a href="" class="half-width">
+                      <img class="icon20" src="../imgs/icons/heart.svg" alt=""
+                    /></a>
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facere hic earum facilis distinctio eveniet delectus
+                      quaerat. Suscipit aspernatur molestiae ea.
+                    </p>
 
-                  <h4>CATEGORY</h4>
-                  <br />
-                  <span class="money">KES102,523</span>
-                  <small class="raised">raised</small>
-                  <span class="percent">200%</span><br />
-                  <div class="progress">
-                    <div
-                      class="progress-bar accent-color-bg"
-                      role="progressbar"
-                      style="width: 56%;"
-                      aria-valuenow="56"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
+                    <h4 class="category">Health</h4>
+                    <br />
+                    <span class="money">KES102,523</span>
+                    <small class="raised">raised</small>
+                    <span class="percent">200%</span><br />
+                    <div class="progress">
+                      <div
+                        class="progress-bar accent-color-bg"
+                        role="progressbar"
+                        style="width: 56%;"
+                        aria-valuenow="56"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <small>5 days left</small>
                   </div>
-                  <small>5 days left</small>
-                </div>
-                <!-- </a> -->
+                </a>
+                <h4 class="city-filter invisible">Eldoret</h4>
+                <h4 class="category-filter invisible">Health</h4>
               </div>
             </div>
           </div>

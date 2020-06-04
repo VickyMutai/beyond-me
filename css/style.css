@@ -536,6 +536,7 @@ aside {
   float: left;
   /* overflow-y: scroll; */
   position: relative;
+  margin-top: 60px;
 }
 
 .aside-item {
@@ -547,6 +548,44 @@ main {
   /* overflow-y: scroll; */
 }
 
+#mid-nav a {
+  font-size: var(--largefont-size);
+  padding-top: 15px;
+}
+.all-projects {
+  margin-top: 50px;
+}
+
+.aside-item .item-title h3 {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: var(--largefont-size);
+}
+
+input.search {
+  width: 50%;
+}
+
+.item-content input {
+  display: inline-block;
+  width: 10%;
+}
+.item-content input#location-search {
+  display: inline-block;
+  width: 100%;
+}
+.item-content label {
+  display: inline-block;
+  width: 80%;
+  font-size: var(--smallfont-size);
+}
+
+/* forever not visible - used it for styling filters (apart from #filter-icon) */
+.category-filter,
+.city-filter,
+#filter-icon {
+  display: none;
+  visibility: hidden;
+}
 @media screen and (max-width: 768px) {
   nav a {
     font-size: var(--smallfont-size);
@@ -559,7 +598,6 @@ main {
     max-width: 30%;
   }
 }
-
 @media screen and (max-width: 425px) {
   :root {
     --main-color: #003c08;
@@ -580,6 +618,16 @@ main {
   }
   main {
     width: 100%;
+  }
+  #filter-icon {
+    visibility: visible;
+    display: block;
+  }
+  .all-projects {
+    margin-top: 0;
+  }
+  .div-title h1 {
+    padding: 10px;
   }
   aside {
     width: 50%;
@@ -670,6 +718,10 @@ main {
     padding-left: 0;
   }
 
+  #mid-nav i {
+    padding-top: 10px;
+  }
+
   #mid-nav form input {
     width: 90%;
     margin: 0;
@@ -722,6 +774,7 @@ main {
 
   .all-projects .div-items {
     margin: 0;
+    padding-top: 30px;
   }
 
   .footer-nav {
