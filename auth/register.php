@@ -1,3 +1,4 @@
+<?php include "server.php" ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,26 +34,19 @@
     <section class="sign-up quater-left half-width full-width">
       <h1>Create Account</h1>
 
-      <form action="" method="post">
+      <form action="register.php" method="post">
+        <?php include "errors.php" ?>
         <section id="" class="">
           <input type="text" name="name" placeholder="name" required />
           <input type="text" name="username" placeholder="username" required />
-          <input
-            type="password"
-            name="password"
-            placeholder="password"
-            required
-          />
-          <input
-            type="password"
-            name="confirm"
-            placeholder="confirm password"
-          />
-          <button type="submit">Sign Up</button>
+          <input type="text" name="email" placeholder="email" required />
+          <input type="password" name="password_1" placeholder="password"required/>
+          <input type="password" name="password_2" placeholder="confirm password" />
+          <button type="submit" name="reg_user">Sign Up</button>
           <hr />
           <div class="auth-actions">
             <a href="./forgotpassword.html">Forgot Password</a>
-            <a href="./register.html">Already have an Account</a>
+            <a href="./register.php">Already have an Account</a>
           </div>
         </section>
       </form>
